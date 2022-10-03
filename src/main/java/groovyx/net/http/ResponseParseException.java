@@ -38,12 +38,15 @@ public class ResponseParseException extends HttpResponseException {
        does not have a constructor to pass the 'cause'.  But I want this to
        extend HttpResponseException so that one exception type can catch
        everything thrown from HttpBuilder. */
-    private Throwable cause;
+    private final Throwable cause;
 
-    public ResponseParseException( HttpResponseDecorator response, Throwable cause ) {
-        super( response );
+    public ResponseParseException(HttpResponseDecorator response, Throwable cause) {
+        super(response);
         this.cause = cause;
     }
 
-    @Override public Throwable getCause() { return this.cause; }
+    @Override
+    public Throwable getCause() {
+        return this.cause;
+    }
 }
