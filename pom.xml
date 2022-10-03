@@ -184,6 +184,13 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub rpardini Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/rpardini/httpbuilder</url>
+        </repository>
+    </distributionManagement>
 
     <licenses>
         <license>
